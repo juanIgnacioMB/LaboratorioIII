@@ -35,15 +35,19 @@ div{
 }
 
 #cuarto-cont{
-    box-sizing: border-box;
-    padding: 25px;
     background: linear-gradient(45deg, pink, white, orange);
     box-shadow: 16px 8px 2px grey;
+}
+
+#cuarto-cont p{
+    text-align: left;
+    padding: 40px;
 }
 
 #quinto-cont{
     background: linear-gradient(240deg, pink, white, orange);
 }
+ 
 
 @media (min-width: 600px) and (max-width:1080px){
     #primer-cont{
