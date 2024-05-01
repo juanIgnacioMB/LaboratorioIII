@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head > 
+    <meta http-equiv="Content-Type" content="utf-8">
+    <title>Ejercicio 001 preguntas HTTP</title>
+</head>
+
+<body>
+    <header>
+        <h1>Preguntas referencias sobre protocolos HTTP</h1>
+    </header>
+    <hr>
+    <section>
+        <h3>Referencias de interes</h3>
+        <nav>
+            <ul>
+                <li> <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Overview" target="_blank">DM web docs</a> </li>
+                <li> <a href="https://keepcoding.io/blog/que-es-el-protocolo-http/" target="_blank">Keepcoding</a> </li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <h1>Preguntas HTTP</h1>
+        <hr>
+        <ul>
+            <li><h4>Sobre que protocolo binario esta montado el protocolo HTTP?</h4> </li>
+            <P>Esta montando sobre el protocolo TCP, producida despues de un handshaking de 3 vias solicitud, aceptacion y confirmacion de conexion </P>
+
+            <li><h4>Cuales son los clientes http y los servidores http mas utilizados?</h4></li>
+            <P>Los clientes mas usados son los buscadores web y los servidores HTTP el Apache y Microsoft IIS</P>
+
+            <li><h4>Que verbos admite un comando en el requerimiento HTTP?</h4></li>
+            <P>GET (solo de lectura), POST (Utilizado normalmente para actualizar recursos en un servidor), DELETE (Utilizado para borrar recursos en un servidor), PUT (Utilizado para crear recursos en un servidor)</P>
+
+            <li><h4>Que contenido lleva el body de un requerimiento HTTP?</h4></li>
+            <P>Envia datos a un servidor, como los datos de un formulario o archivos para realizar un upload</P>
+
+            <li><h4>Que diferencia existe entre un URL y un URI?</h4> </li>
+            <P>La URL es la direccion web de un recurso de Internet en cambio la URI ubica el lugar donde se encuentra</P>
+
+            <li><h4>Como se almacena informacion relacionada con las respuestas http?</h4> </li>
+            <P>Lo hace a traves de cookies. Las cookies (a menudo conocidas como cookies de Internet) son archivos de texto con pequenos datos, que se utilizan para identificar tu ordenador cuando utilizas una red</P>
+
+            <li><h4>Que significa Virtual hosting?</h4></li>
+            <P>Es la capacidad de una servidor web para alojar varios dominio en una conputadora fisica. Hay dos tipos de virtualhost: Los que se basan en direcciones IP, donde cada página web tendra una IP diferente</P>
+
+            <li><h4>Porque el HTTP se considera STATE LESS?</h4></li>
+            <P>Por que cada solicitud que el cliente hace es una transaccion independiente, que no esta relacionada a ninguna solicitud previa y cada una es diferente para el servidor</P>
+
+            <li><h4>Como va a mejorar la velocidad de la WEB en poco tiempo</h4> </li>
+            <P>A traves del protocolo HTTP/2, lo hace compactando cabeceras, prioritizando elementos a transferir y multiplexando sin esperar respuestas. Ademas de trabajar con paquetes binarios en vez de paquetes en formato de ASCII</P>
+
+            <li><h4>Como va a mejorar el comportamiento de una aplicacion WEB en ambientes ruidosos o de debil conexion?</h4> </li>
+            <P>Con la llegada del HTTP/3 que utiliza el protocolo QUIC, el cual utiliza UDP en vez de TCP, que produce conexiones mas cortas, eficientes y de facil establecimiento, lo que hace que la reconeccion sea mas facil en ambientes de mucho ruido o debil conexion.</P>
+
+        </ul>
+        <hr>
+    </section>
+
+    <section>
+        <h3>Imagenes del protocolo HTTP</h3>
+        <hr>
+        <img src="imagen http 1.webp" alt="">
+        <br>
+        <img src="imagen http 2.jpg" style="width: 600px;" alt="">
+        <hr>
+    </section>
+
+    <section>
+        <h3>Video sobre el protocolo HTTP</h3>
+        <video src="video http.mp4" width="500" type="video/mp4" height="500" controls>
+        </video>
+        <hr>
+    </section>
+
+    <footer>
+        <h1>Datos del alumno</h1>
+        <h3>Melgarejo Brabo Juan Ignacio</h3>
+        <p>Legajo: 15-28890</p>
+        <a href="">jmelgarejo890@alumnos.frh.utn.edu.ar</a>
+    </footer>
+</body>

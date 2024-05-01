@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head > 
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <title>Ejercicio 001 preguntas HTTP</title>
+</head>
+
+<body>
+    <section>
+        <h1>Entradas simples</h1>
+
+        <form action="./RespuestaFormulario" target="_blank" method="get">
+            <ul>
+                <li><label name="apellido"><h4>Apellido</h4></label></li>
+                <input type="text">
+
+                <li><label name="contraseña"><h4>Contraseña</h4></label></li>
+                <input type="password">
+
+                <li><h4>Oculto:</h4></li>
+                <input type="hidden">
+
+                <li><h4>Campo deshabilitado</h4></li>
+                <input type="text" name="valorDeshabilitado" placeholder="Valor deshabilitado" disabled>
+
+                <li><h4>Campo solo de lectura</h4></li>
+                <input type="text" vame="soloLectura" placeholder="Campo solo de lectura" readonly>
+            </ul>
+
+            <h1>Entradas de seleccion</h1>
+            <ul>
+                <li><h4>Practica deportes</h4></li>
+                <input type="checkbox" name="deporte" id="">
+
+                <li><h4>Practica musica</h4></li>
+                <input type="checkbox" name="musica" id="">
+
+                <li><h4>Practica pintura artistica</h4></li>
+                <input type="checkbox" name="pintura" id="">
+
+                <li><h4>Sexo</h4></li>
+               <label for="" >Masculino</label>  <input type="radio" checked="checked" name="sexo">
+               <label for="">Femenino</label> <input type="radio" name="sexo" >
+
+               <li><h4>Estudios cursados</h4></li>
+               <select name="estudios" id="estudios">
+
+                <option value="primarios" selected="selected" >Primarios</option>
+                <option value="secundarios">Secundarios</option>
+                <option value="terciario">Terciarios</option>
+                <option value="Universitarios">Universitarios</option>
+                <option value="posgrado">Postgrado</option>
+
+               </select>
+
+               <li><h4>Fecha y hora</h4></li>
+               <input type="date" name="fecha">
+               <input type="time">
+
+               <li><h4>Color</h4></li>
+               <input type="color" name="color">
+            </ul>
+          
+
+            <h1>Entradas con validacion</h1>
+            <ul>
+                <li><h4>Comentario (validacion por requerido)</h4></li>
+                <input type="text" required="required">
+
+                <li><h4>Email (con doble validacion x@x y requerido)</h4></li>
+                <input type="email" required="required" name="correo">
+
+                <li><h4>numero entero limitado (validacion por tipo numererico y cota)</h4></li>
+                <input type="number"  name="numero" max="50">
+
+                <li><h4>numero decimal (validacion por tipo numererico y cota)</h4></li>
+                <input type="number" step="0.1"  name="numero">
+
+                <li><h4>URL validado (escribir http://)</h4></li>
+                <input type="url" name="url" required="required">
+
+                
+                <li><h4>pattern de validacion</h4></li>
+                <input type="text" name="patron" required="required" pattern="[a-z]{3}[1-2]{2}" title="3 letras y dos numeros que sean 1 o 2 ">
+
+                <li><h4>pattern de validacion</h4></li>
+                <input type="text" name="numetoTel" required="required" pattern="[(]{1}[+54]{1}[)][\s]{1}[11]{1}[\s]{1}[100000000-99999999]{1}" title="(+54) 11 xxxxxxxx">
+
+                <br><br>
+               <li> <button type="submit">Enviar</button></li>
+               <br>
+               <li><button type="reset"> resetear</button></li>
+            </ul>
+
+        </form>
+    </section>
+</body>
+
+</html>
