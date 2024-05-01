@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+}
+section{
+    margin: auto;
+    width: 80%;
+    background-color: aquamarine;
+}
+h1{
+    margin: 0;
+}
+div{
+    margin: 35px auto;
+    width: 40%;
+    height: 15em;
+    border-radius: 10px;
+}
+
+#primer-cont{
+    background-color: lightgrey;
+    box-shadow: 16px 8px 2px grey;
+}
+
+#segundo-cont{
+    background: radial-gradient(white,lightblue,pink);
+   
+}
+
+#tercer-cont{
+    background-image: url(fotoCampo.avif), linear-gradient(45deg, lightgreen, lightblue);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain;
+    
+}
+
+#cuarto-cont{
+    box-sizing: border-box;
+    padding: 25px;
+    background: linear-gradient(45deg, pink, white, orange);
+    box-shadow: 16px 8px 2px grey;
+}
+
+#quinto-cont{
+    background: linear-gradient(240deg, pink, white, orange);
+}
+
+@media (min-width: 600px) and (max-width:1080px){
+    #primer-cont{
+        background-color: yellow;
+    }
+}
+
+
+@media  (max-width:600px){
+    #primer-cont{
+        background-color: lightblue;
+    }
+}
+
+
