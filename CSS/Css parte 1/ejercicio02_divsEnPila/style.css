@@ -14,7 +14,7 @@ div{
     width: 40%;
     height: 15em;
     border-radius: 10px;
-    color: red;
+   
 }
 
 #primer-cont{
@@ -23,8 +23,8 @@ div{
 }
 
 #segundo-cont{
-   /* background: radial-gradient(white,lightblue,pink);*/
-   background-color: red;
+   background: radial-gradient(white,lightblue,pink);
+  
    
 }
 
