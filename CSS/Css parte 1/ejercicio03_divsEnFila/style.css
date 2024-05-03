@@ -1,0 +1,55 @@
+
+ section{
+    width: 90%;
+    height: 7em;
+    background-color: navy;
+    margin: auto;
+    
+}
+
+h1{
+    padding: 1rem;
+    margin: auto;
+}
+
+div{
+    background: linear-gradient(90deg, green,white, lightblue);
+    float: left;
+    margin: 1.5rem ;
+    width: 11em;
+    height: 5em;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#primer-cont{
+    background: linear-gradient(180deg, green,white, lightblue);
+}
+
+#segundo-cont{
+    background: radial-gradient(green, white, lightblue)
+}
+
+#tercer-cont{
+    background-image: url(imagen1.jpg), linear-gradient(90deg, green,white, lightblue);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:contain;
+}
+
+#cuarto-cont{
+    background-image: url(imagen2.jpg), linear-gradient(90deg, green,white, lightblue);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+#quinto-cont{
+    background: linear-gradient(90deg, green,white, lightblue);
+}
+
+
+#sexto-cont{
+    background: radial-gradient(green, white, lightblue)
+}
+
