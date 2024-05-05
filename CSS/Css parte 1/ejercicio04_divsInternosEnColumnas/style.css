@@ -1,0 +1,73 @@
+body, h1{
+    margin: 0;
+}
+div{
+    padding: 1em;
+    box-sizing: border-box;
+    margin-left: 2em;
+    height: fit-content;
+    margin-bottom: 1.5em;
+    
+}
+section{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    background-color: green;
+    overflow: auto;
+}
+
+#cont-principal{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#primer-cont{
+    background-color: lightblue;
+    width: 15em;
+    padding: 1em;
+    box-sizing: border-box;
+   
+
+}
+
+#segundo-cont{
+    background-color: pink;
+    width: 15em;
+    
+}
+
+#cont-secundario{
+    float: left;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    
+}
+
+#contx{
+    width: 15em;
+   
+    background-color: orange;
+
+    
+}
+
+img{
+    width: 9em;
+    display: block;
+    margin: auto;
+  
+}
+
+@media (max-width: 1100px){
+    #cont-principal{
+        flex-direction: column;
+    }
+    #primer-cont ,#segundo-cont,#contx{
+        background-color: yellow;
+    }
+}
