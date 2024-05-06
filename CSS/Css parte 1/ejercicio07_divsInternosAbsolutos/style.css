@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+#cont-principal {
+    background-color: orange;
+    width: 90%;
+    height: fit-content;
+    min-height: 100vh;
+    margin: auto;
+    box-sizing: border-box;
+    padding-bottom: 70em;
+}
+
+
+#cont-principal h1 {
+    margin: 0;
+}
+
+div {
+    width: 30%;
+    height: 50%;
+}
+
+#con1 {
+
+    position: absolute;
+    background-color: aqua;
+    top: 10%;
+    left: 15%;
+}
+
+#cont2 {
+    position: absolute;
+    min-height: fit-content;
+    background-color: beige;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 1em;
+    top: 60%;
+    left: 60%;
+    transform: rotate(25deg);
+}
+
+#cont2 img {
+    height: 40%;
+    margin-left: 1em;
+}
+
+#cont3 {
+    background-color: #5F9EA0;
+    opacity: 0.7;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
