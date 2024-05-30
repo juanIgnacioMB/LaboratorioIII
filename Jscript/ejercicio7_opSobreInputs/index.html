@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Ejercicio 7 operaciones sobre inputs</title>
+</head>
+<body>
+  <h1>
+    Introducir valor en el input y luego presione boton de operacion
+    correspondiente
+  </h1>
+  <input type="text" id="x" />
+
+  <button id="mostrarValor">Mostar valor</button>
+
+  <button id="aumentar1">Sumar 1</button>
+
+  <button id="ElevarCuadrado">X^2</button>
+
+  <button id="multiplicar2">Multiplcar * 2</button>
+
+  <button id="ElevarAX">X^2</button>
+
+  <script type="text/javascript">
+    parseInt(document.getElementById("x").value);
+
+    document
+      .getElementById("mostrarValor")
+      .addEventListener("click", function () {
+        alert(document.getElementById("x").value);
+      });
+
+    document.getElementById("aumentar1").addEventListener("click", function () {
+      parseInt(document.getElementById("x").value++);
+    });
+
+    document
+      .getElementById("ElevarCuadrado")
+      .addEventListener("click", function () {
+        parseInt(
+          (document.getElementById("x").value *=
+            document.getElementById("x").value)
+        );
+      });
+
+    document
+      .getElementById("multiplicar2")
+      .addEventListener("click", function () {
+        parseInt((document.getElementById("x").value *= 2));
+      });
+
+    document.getElementById("ElevarAX").addEventListener("click", function () {
+      parseInt(
+        (document.getElementById("x").value = Math.pow(
+          2,
+          document.getElementById("x").value
+        ))
+      );
+    });
+  </script>
+</body>

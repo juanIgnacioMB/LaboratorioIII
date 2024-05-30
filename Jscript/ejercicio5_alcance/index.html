@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>IEjercicio 5 alcance</title>
+  <style>
+    button {
+      width: 15rem;
+    }
+  </style>
+</head>
+<body>
+  <button
+    onclick="var variableGlobal = prompt('ingrese valor de la variable a'); alert('la variable a vale: '+variableGlobal); alert('y su tipo es: '+typeof(variableGlobal))"
+  >
+    Inicializacion de variable dentro de un procedimiento
+  </button>
+
+  <button
+    onclick="variableGlobal = prompt('ingrese valor de la variable a'); alert('la variable a vale: '+variableGlobal); alert('y su tipo es: '+typeof(variableGlobal))"
+  >
+    Inicializacion forzada de variable dentro de un procedimiento
+  </button>
+
+  <button
+    onclick=" alert('la variable a vale: '+variableGlobal); alert('y su tipo es: '+typeof(variableGlobal))"
+  >
+    mostrar variable global
+  </button>
+
+  <script type="text/javascript">
+    var variableGlobal;
+    alert(
+      "Una variable global se declaro pero no se inicializo, variableGlobal = " +
+        variableGlobal
+    );
+    alert("el valor de variableGlobal es: " + typeof variableGlobal);
+
+    alert(a);
+  </script>
+</body>

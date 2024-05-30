@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Ejercicio 8 operaciones entre inputs</title>
+  <style>
+    div {
+      display: flex;
+      flex-direction: column;
+      background-color: orange;
+      width: 80vw;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+    input {
+      width: 100px;
+    }
+    label {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Introducir valor en los inputs y luego presione boton de operacion
+    correspondiente
+  </h1>
+  <div>
+    <label for="">Entrada 1</label>
+    <input type="text" id="x" />
+
+    <label for="">Entrada 2</label>
+    <input type="text" id="y" />
+
+    <label for="">Entrada 3</label>
+    <input type="text" id="z" />
+
+    <label for="">Resultado</label>
+    <input type="text" id="resultado" />
+  </div>
+
+  <button id="sumar">Sumar</button>
+
+  <button id="promedio">promedio</button>
+
+  <button id="mayor">Mayor</button>
+
+  <script type="text/javascript">
+    var x = document.getElementById("x");
+    var y = document.getElementById("y");
+    var z = document.getElementById("z");
+
+    var result = document.getElementById("resultado");
+
+    document.getElementById("sumar").addEventListener("click", function () {
+      result.value = parseInt(x.value) + parseInt(y.value) + parseInt(z.value);
+    });
+
+    document.getElementById("promedio").addEventListener("click", function () {
+      result.value =
+        (parseInt(x.value) + parseInt(y.value) + parseInt(z.value)) / 3;
+    });
+
+    document.getElementById("mayor").addEventListener("click", function () {
+      result.value = mayor(
+        parseInt(x.value),
+        parseInt(y.value),
+        parseInt(z.value)
+      );
+    });
+
+    function mayor(num1, num2, num3) {
+      var mayor = 0;
+
+      if (num1 > num2 && num1 > num3) {
+        mayor = num1;
+      } else if (num2 > num1 && num2 > num3) {
+        mayor = num2;
+      } else {
+        mayor = num3;
+      }
+
+      return mayor;
+    }
+  </script>
+</body>

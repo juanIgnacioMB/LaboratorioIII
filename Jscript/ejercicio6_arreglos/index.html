@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>IEjercicio 6 Arreglos</title>
+</head>
+<body>
+  <h1>Varaibles interdimensionales</h1>
+  <h2>Array de indice numerico</h2>
+
+  <script type="text/javascript">
+    var libros = [];
+    libros[0] = "EL misterio de Salem`s Slot";
+    libros[1] = "Under the Dome";
+    libros.push(
+      prompt("El arreglo libros cuenta con 2 elementos, ingrese el tercero: ")
+    );
+
+    document.write("<h3>Tipo de dato del array" + typeof libros + "</h3>");
+    document.write(
+      "<h3>Primer elemento en arreglo libros: " + libros[0] + "</h3>"
+    );
+    document.write(
+      "<h3>Segundo elemento en arreglo libros:" + libros[1] + "</h3>"
+    );
+    document.write(
+      "<h3>Tercer elemento en arreglo libros:" + libros[2] + "</h3>"
+    );
+
+    document.write("<h3>Cantidad de elementos: " + libros.length + "</h3>");
+  </script>
+</body>

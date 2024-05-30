@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Indice ejercicios CSS parte 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    
+    <header>
+        <h1>FORMULARIO</h1>
+    </header>
+    <section>
+<form action="./RespuestaFormulario.html" target="_blank" method="get">
+        <div class="cont">
+            <label for="">1 Nombre:</label>
+            <input name="Nombre" required="required" class="tx" type="text">
+        </div>
+        <div class="cont">
+            <label for="">2 Apellido:</label>
+            <input name="apellido" required="required" class="tx"type="text">
+        </div>
+        <div class="cont">
+            <label for="">3 Contraseña:</label>
+            <input required="required" class="tx"type="text">
+        </div>
+        <div class="cont">
+            <label for="">4 Campo desabilitado:</label>
+            <input required="required" class="tx"type="text" disabled placeholder="Campo deshabilitado">
+        </div>
+        <div class="cont">
+            <label for="">5 Fecha:</label>
+            <input name="Fecha" required="required" class="tx" type="date" >
+        </div>
+
+        <div class="cont"> 
+            <label for="">6 DNI:</label>
+            <input name="DNI" required="required" class="tx" type="text">
+        </div>
+
+        <div class="cont">
+            <label for="">7 Actividades extracurrilculares:</label>
+            <label for="">Musica</label>
+            <input name="musica" class="rad" type="radio" >
+            <label for="">Baile</label>
+            <input name="baile"  class="rad" type="radio">
+        </div class="cont">
+
+
+        <div class="cont">
+            <label for="">8 sexo:</label>
+            <label name="Femenino" for="">Femenino</label>
+            <input required="required" class="rad" type="radio">
+            <label for="">Masulino</label>
+            <input name="masculino" required="required" class="rad" type="radio">
+        </div>
+
+        <div class="cont">
+            <h1>9 VACIO</h1>
+        </div>
+
+
+        <div class="cont">
+            <label for="">10 Estudios cursados:</label>
+            <select name="Estudios" class="tx">
+                <option value="">Secundario</option>
+                <option value="">Universitarios</option>
+                <option value="">Doctorado</option>
+
+            </select>
+        </div>
+
+        <div class="cont">
+            <label for="">11 Area de desempeño:</label>
+            <select name="area de desempeño"class="tx">
+                <option value="">Administracion</option>
+                <option value="">Contable</option>
+                <option value="">Sistemas</option>
+                <option value="">Legales</option>
+
+            </select>
+        </div>
+
+        <div class="cont">
+            <label for="">12 Turno:</label>
+            <select class="tx">
+                <option value="">Mañana</option>
+                <option value="">Tarde</option>
+                <option value="">Noche</option>
+
+            </select>
+        </div>
+
+            <div class="cont">
+                <label for="">13 conduce:</label>
+                <label for="">Si</label>
+                <input name="Si-conduce" class="rad" type="radio">
+                <label for="">No</label>
+                <input name="No-conduce"class="rad" type="radio">
+            </div>
+
+            <div class="botones-cont">
+                <button class="but" type="submit" name="Enviar"></button>
+                <input class="but" type="reset" name="Reset"></input>
+            </div>
+    </form>
+    </section>
+
+    <div class="footer">
+        <h4>Footer</h4>
+    </div>
+</body>
