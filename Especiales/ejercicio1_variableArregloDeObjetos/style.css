@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+header,
+footer {
+    width: 100%;
+    height: 15%;
+    background-color: #902bf5;
+    color: lightgrey;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+form {
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #1a1463;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    width: 500px;
+    height: 40px;
+}
+
+.input-div {
+    width: 800px;
+}
+
+button {
+    width: 500px;
+    height: 50px;
+    font-size: 32px;
+}
+
+select {
+    width: 500px;
+    height: 40px;
+    font-size: 32px;
+}

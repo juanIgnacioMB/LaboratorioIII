@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>IEjercicio 11 location</title>
+</head>
+<body>
+  <button id="imdb">IMDB</button>
+  <button id="wiki">wikipedia</button>
+  <button id="git">gitHub</button>
+
+  <script type="text/javascript">
+    document.getElementById("imdb").addEventListener("click", function () {
+      location.href = "https://www.imdb.com/";
+    });
+
+    document.getElementById("wiki").addEventListener("click", function () {
+      location.href = "https://www.wikipedia.org/";
+    });
+
+    document.getElementById("git").addEventListener("click", function () {
+      location.href = "https://github.com/";
+    });
+  </script>
+</body>

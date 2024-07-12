@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Ejercicio 13 Variables de tipo objeto</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    #adicionar {
+      display: flex;
+      flex-direction: column;
+      width: 50vw;
+      background-color: pink;
+      margin: auto;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    #adicionar input {
+      width: 200px;
+    }
+
+    #adicionar button {
+      width: 100px;
+      margin: 10px;
+    }
+
+    #control {
+      margin: auto;
+      width: 50vw;
+    }
+  </style>
+</head>
+<body>
+  <div id="adicionar">
+    <h1>Adicionar persona</h1>
+    <label name="nombre" for="">Nombre</label>
+    <input type="text" id="nombre" />
+
+    <label name="apellido" for="">Apellido</label>
+    <input type="text" id="apellido" />
+
+    <label for="">Fecha de nacimiento</label>
+    <input name="fecha" id="fecha" type="text" />
+    <button id="agregar">Agregar persona</button>
+  </div>
+
+  <div id="control">
+    <h1>Control</h1>
+    <button id="mostrar">Mostrar lista de personas</button>
+    <button id="esconder">Esconder lista de personas</button>
+  </div>
+  <div id="tabla-cont"></div>
+
+  <script type="text/javascript">
+    var persona = {
+      nombre: "Marcos",
+      apellido: "Rodriguez",
+      fechanac: "11/02/2002",
+    };
+    var arrayPersonas = [persona];
+
+    //Pusheo un segundo objeto persona al arrayPersonas
+
+    arrayPersonas.push({
+      nombre: "Miguel",
+      apellido: "Kamchen",
+      fechanac: "22/10/1999",
+    });
+
+    //Declaro un objeto nuevo cuyo primer campo es el arrayPersonas
+
+    var objetoPersonas = { persona: arrayPersonas };
+
+    document.getElementById("agregar").addEventListener("click", function () {
+      //Tomo los datos de los imputs y los guardo en un objeto personaTemp, para luego pushearlos al arrayPersonas
+
+      var nombreInput = document.getElementById("nombre").value;
+      var apellidoInput = document.getElementById("apellido").value;
+      var fechaInput = document.getElementById("fecha").value;
+
+      var personaTemp = {
+        nombre: nombreInput,
+        apellido: apellidoInput,
+        fechanac: fechaInput,
+      };
+
+      arrayPersonas.push(personaTemp);
+
+      //Comienzo la cadena de texto que va a contener todo el codigo HTML que luego asignare al div contenedor "tabla"
+
+      var texto = "<h1>Personas:</h1>";
+
+      texto = texto + "<table style='border-collapse:collapse;border:solid'>";
+
+      //Recorro el arrayPersonas para crear una nueva fila de la tabla por cada objeto persona que disponga
+
+      objetoPersonas.persona.forEach(function (item, index) {
+        texto = texto + "<tr><td style='border:solid'>" + item.nombre + "</td>";
+        texto = texto + "<td style='border:solid'>" + item.apellido + "</td>";
+        texto =
+          texto + "<td style='border:solid'>" + item.fechanac + "</td></tr>";
+      });
+
+      texto = texto + "</table>";
+
+      //Utilizo el metodo lenght para indicar la cantidad de elementos que tiene arrayPersonas
+
+      texto =
+        texto +
+        "<h4>Longitud del arreglo de objetos: " +
+        arrayPersonas.length +
+        "<h4>";
+
+      //Finalmente "envio" al div "tabla" todo el codigo html que almacené en la variable "texto"
+
+      document.getElementById("tabla-cont").innerHTML = texto;
+    });
+
+    document.getElementById("mostrar").addEventListener("click", function () {
+      document.getElementById("tabla-cont").style.display = "block";
+    });
+
+    document.getElementById("esconder").addEventListener("click", function () {
+      document.getElementById("tabla-cont").style.display = "none";
+    });
+  </script>
+</body>

@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    font-family: arial;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+footer,
+header {
+    background-color: #800080;
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    color: white;
+
+}
+
+section {
+    height: 70%;
+    background-color: #3a3153;
+    display: flex;
+    justify-content: center;
+}
+
+
+section button {
+    margin: auto;
+    width: 300px;
+    height: 50px;
+    font-size: 32px;
+    border-radius: 10px;
+
+
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    visibility: visible;
+    z-index: 10;
+    display: none;
+
+}
+
+#cerrar-cont {
+    width: 100%;
+    background-color: red;
+}
+
+#cerrar-cont button {
+    float: right;
+    width: 50px;
+    font-size: 20px;
+}
+
+#cont4 {
+    display: flex;
+
+    height: 30vh;
+
+}
+
+#cont1 {
+    width: 70vw;
+    height: 30%;
+    margin: 10% auto;
+    background-color: #3a3153;
+    border-radius: 10px;
+
+
+}
+
+#cont-datos {
+    color: white;
+    background-color: #800080;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+}
+
+#cont-json {
+    color: white;
+    height: 100%;
+}
+
+
+input {
+    width: 200px;
+}
+
+#button-cont {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+#enviar {
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+}

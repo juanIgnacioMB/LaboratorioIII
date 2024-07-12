@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Ejercicio 12 confirmaciòn de formulario</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    #cont {
+      margin: 0 auto;
+      width: 50vw;
+      height: 20vh;
+      background-color: darkolivegreen;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    #botones {
+      width: fit-content;
+      margin: auto;
+    }
+
+    label {
+      color: white;
+      display: block;
+    }
+    button {
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="cont">
+    <h1>Confirmaciòn de envio y de reset</h1>
+
+    <form id="formulario" action="">
+      <label for="">Nombre</label>
+      <input name="nombre" type="text" />
+      <label for="">apellido</label>
+      <input name="apellido" type="text" />
+    </form>
+
+    <div id="botones">
+      <button id="blanqueo">Blanquear</button>
+      <button id="enviar">Enviar</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById("formulario").method = "get";
+    document.getElementById("formulario").action = "./respuestaFormulario.html";
+
+    document.getElementById("enviar").addEventListener("click", function () {
+      var conf = confirm("Esta seguro de enviar");
+
+      if (conf) {
+        document.getElementById("formulario").submit();
+      }
+    });
+
+    document.getElementById("blanqueo").addEventListener("click", function () {
+      document.getElementById("formulario").reset();
+    });
+  </script>
+</body>

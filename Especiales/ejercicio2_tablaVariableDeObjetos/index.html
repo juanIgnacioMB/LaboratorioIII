@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Ejercicios espciales 2 tabla de objetos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Formulario para altas de peliculas</h1>
+    <button id="mostrar">Mostrar</button>
+    <button id="esconder">esconder</button>
+  </header>
+
+  <div>
+    <table id="tabla">
+      <tr>
+        <th>Titulo</th>
+        <th>Lanzamiento</th>
+        <th>Director</th>
+        <th>Rating imdb</th>
+        <th>Genero</th>
+      </tr>
+
+      <tbody id="tbo"></tbody>
+    </table>
+  </div>
+  <footer>
+    <h1>Pie del formulario</h1>
+  </footer>
+
+  <script>
+    var textoPeliculas =
+      '{"peliculas": ' +
+      "[" +
+      '{"titulo" : "Django unchained", "lanzamiento": "31/01/2013" , "director": "Tarantino", "ratingImdb" : "8.5" , "genero": "thiller"},' +
+      '{"titulo" : "Fearless", "lanzamiento": "15/10/1993" , "director": "Weir", "ratingImdb" : "7.1", "genero": "drama"},' +
+      '{"titulo" : "The Exorcist", "lanzamiento": "15/08/1974" , "director": "Friedkin", "ratingImdb" : "8.1", "genero": "terror"},' +
+      '{"titulo" : "Django unchained", "lanzamiento": "31/01/2013" , "director": "Tarantino", "ratingImdb" : "8.5" , "genero": "thiller"},' +
+      '{"titulo" : "Fearless", "lanzamiento": "15/10/1993" , "director": "Weir", "ratingImdb" : "7.1", "genero": "drama"},' +
+      '{"titulo" : "Fearless", "lanzamiento": "15/10/1993" , "director": "Weir", "ratingImdb" : "7.1", "genero": "drama"},' +
+      '{"titulo" : "Fearless", "lanzamiento": "15/10/1993" , "director": "Weir", "ratingImdb" : "7.1", "genero": "drama"},' +
+      '{"titulo" : "Fearless", "lanzamiento": "15/10/1993" , "director": "Weir", "ratingImdb" : "7.1", "genero": "drama"},' +
+      '{"titulo" : "Fearless", "lanzamiento": "15/10/1993" , "director": "Weir", "ratingImdb" : "7.1", "genero": "drama"},' +
+      '{"titulo" : "Fearless", "lanzamiento": "15/10/1993" , "director": "Weir", "ratingImdb" : "7.1", "genero": "drama"}' +
+      "]" +
+      "}";
+
+    var peliculasJson = JSON.parse(textoPeliculas);
+    var objTbDatos = document.getElementById("tbo");
+    var tabla = document.getElementById("tabla");
+    var mostrar = document.getElementById("mostrar");
+    var esconder = document.getElementById("esconder");
+
+    var tablaCont = document.getElementById("tabla-cont");
+
+    const crearTablaPeliculas = () => {
+      peliculasJson.peliculas.forEach(function (peli, argIndice) {
+        var objTr = document.createElement("tr");
+        var objTd = document.createElement("td");
+        var objTd2 = document.createElement("td");
+        var objTd3 = document.createElement("td");
+        var objTd4 = document.createElement("td");
+        var objTd5 = document.createElement("td");
+        objTd.setAttribute("className", "td-pelis");
+        objTr.setAttribute("className", "tr-pelis");
+        objTd.innerHTML = peli.titulo;
+        objTd2.innerHTML = peli.lanzamiento;
+        objTd3.innerHTML = peli.director;
+        objTd4.innerHTML = peli.ratingImdb;
+        objTd5.innerHTML = peli.genero;
+
+        objTr.appendChild(objTd);
+        objTr.appendChild(objTd2);
+        objTr.appendChild(objTd3);
+        objTr.appendChild(objTd4);
+        objTr.appendChild(objTd5);
+
+        objTbDatos.appendChild(objTr);
+      });
+    };
+
+    crearTablaPeliculas();
+
+    mostrar.addEventListener("click", function () {
+      tabla.style.visibility = "visible";
+    });
+
+    esconder.addEventListener("click", function () {
+      tabla.style.visibility = "hidden";
+    });
+  </script>
+</body>

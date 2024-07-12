@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Ejercicio 9 funciones compartidas</title>
+  <style>
+    .principal {
+      background-color: aqua;
+      margin: auto;
+      width: 25%;
+      height: fit-content;
+      border-radius: 5px;
+    }
+
+    input {
+      width: 98%;
+      height: 25px;
+    }
+    .botones-cont {
+      display: flex;
+      box-sizing: border-box;
+      padding: 10px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .botonNumero {
+      width: 28%;
+      height: 40px;
+      border-radius: 10px;
+
+      margin-top: 50px;
+    }
+
+    .operaciones {
+      background-color: beige;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    .operacion {
+      width: 40%;
+      height: 50px;
+      border-radius: 10px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="principal">
+    <input type="text" style="direction: rtl" id="visor" />
+    <div class="botones-cont">
+      <button id="1" class="botonNumero">1</button>
+      <button id="2" class="botonNumero">2</button>
+      <button id="3" class="botonNumero">3</button>
+      <button id="4" class="botonNumero">4</button>
+      <button id="5" class="botonNumero">5</button>
+      <button id="6" class="botonNumero">6</button>
+      <button id="7" class="botonNumero">7</button>
+      <button id="8" class="botonNumero">8</button>
+      <button id="9" class="botonNumero">9</button>
+      <button id="0" class="botonNumero">0</button>
+    </div>
+
+    <div class="operaciones">
+      <button id="suma" class="operacion">+</button>
+      <button id="mostrar" class="operacion">Mostrar acumulador</button>
+      <button id="borrarAcum" class="operacion">Borrar acumulador</button>
+      <button id="borrarDisp" class="operacion">Borrar display</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var acum = 0;
+    var visor = document.getElementById("visor");
+
+    document.getElementById("1").addEventListener("click", function () {
+      visor.value += "1";
+    });
+
+    document.getElementById("2").addEventListener("click", function () {
+      visor.value += "2";
+    });
+
+    document.getElementById("3").addEventListener("click", function () {
+      visor.value += "3";
+    });
+
+    document.getElementById("4").addEventListener("click", function () {
+      visor.value += "4";
+    });
+
+    document.getElementById("5").addEventListener("click", function () {
+      visor.value += "5";
+    });
+
+    document.getElementById("6").addEventListener("click", function () {
+      visor.value += "6";
+    });
+    document.getElementById("7").addEventListener("click", function () {
+      visor.value += "7";
+    });
+
+    document.getElementById("8").addEventListener("click", function () {
+      visor.value += "8";
+    });
+
+    document.getElementById("9").addEventListener("click", function () {
+      visor.value += "9";
+    });
+
+    document.getElementById("0").addEventListener("click", function () {
+      visor.value += "0";
+    });
+
+    document.getElementById("suma").addEventListener("click", function () {
+      acum += parseInt(visor.value);
+      visor.value = "";
+    });
+
+    document.getElementById("mostrar").addEventListener("click", function () {
+      alert(acum);
+    });
+
+    document
+      .getElementById("borrarAcum")
+      .addEventListener("click", function () {
+        acum = 0;
+      });
+
+    document
+      .getElementById("borrarDisp")
+      .addEventListener("click", function () {
+        visor.value = "";
+      });
+  </script>
+</body>

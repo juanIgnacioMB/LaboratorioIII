@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Ejercicio 16 conmutacion de Clase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Cambio de estilos dinamico</h1>
+  <div id="contLista">
+    <h3>Lista con estilos</h3>
+    <ul class="lista">
+      <li>aaaaa</li>
+      <li>bbbbbb</li>
+      <li>ccccc</li>
+      <li>dddddd</li>
+    </ul>
+  </div>
+
+  <button id="est1">Estilo 1</button>
+  <button id="est2">Estilo 2</button>
+  <button id="est3">Estilo 3</button>
+  <button id="est4">Estilo 4</button>
+
+  <script type="text/javascript">
+    var conLista = document.getElementById("contLista");
+    var est1 = document.getElementById("est1");
+    var est2 = document.getElementById("est2");
+    var est3 = document.getElementById("est3");
+    var est4 = document.getElementById("est4");
+
+    est1.addEventListener("click", function () {
+      contLista.className = "cont1";
+    });
+
+    est2.addEventListener("click", function () {
+      contLista.className = "cont2";
+    });
+
+    est3.addEventListener("click", function () {
+      contLista.className = "cont3";
+    });
+
+    est4.addEventListener("click", function () {
+      contLista.className = "cont4";
+    });
+  </script>
+</body>

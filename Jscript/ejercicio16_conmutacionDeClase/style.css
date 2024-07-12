@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+}
+div{
+    width: 20vw;
+    height: 40vh;
+}
+.cont1{
+    background-color: navy;
+    border: 5px solid beige;
+    color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.cont1 ul{
+    list-style: circle;
+}
+
+.cont2{
+    background-color: orange;
+    border: 5px solid darkgreen;
+    color: darkgreen;
+    font-size: 32px;
+}
+
+.cont2 ul{
+    list-style: square;
+    margin-left: 50px;
+}
+
+
+.cont3{
+    background-color: purple;
+    border: 5px solid lightblue;
+    color: lightblue;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.cont3 ul{
+    width: 30%;
+    list-style: lower-alpha;
+    margin: auto;
+}
+
+
+.cont4{
+    background-color: yellow;
+    border: 5px solid navy;
+    color: navy;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 100px;
+}
+
+.cont4 ul{
+    width: 30%;
+    list-style: upper-alpha;
+    margin: auto;
+}
+
+.cont4 h3{
+   text-align: center;
+}

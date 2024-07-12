@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>Ejercicio 17 Creacion dinamica de objetos</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    #cont {
+      width: 60vw;
+      height: 50vh;
+      background-color: #b95cf4;
+      margin: 10% auto;
+      overflow: auto;
+    }
+
+    .divCreado {
+      width: 50%;
+      background-color: #fc7b54;
+      margin: 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <button id="agregar">Agregar objeto</button>
+  <button id="limpiar">Limpiar</button>
+  <button id="info">Info</button>
+  <div id="cont"></div>
+
+  <script type="text/javascript">
+    var agregar = document.getElementById("agregar");
+    var limpiar = document.getElementById("limpiar");
+    var info = document.getElementById("info");
+    var cont = document.getElementById("cont");
+
+    agregar.addEventListener("click", function () {
+      var nuevoDiv = document.createElement("div");
+      var textoHtml = "<h1>Elemento creado: ";
+      textoHtml = textoHtml + cont.childNodes.length;
+      textoHtml = textoHtml + "</H1>";
+      nuevoDiv.innerHTML = textoHtml;
+      nuevoDiv.className = "divCreado";
+      cont.appendChild(nuevoDiv);
+    });
+
+    info.addEventListener("click", function () {
+      alert("Hay: " + cont.childNodes.length + " elementos creados");
+
+      for (i = 0; i < cont.childNodes.length; i++) {
+        alert("indice: " + i + " innerHTML:" + cont.childNodes[i].innerHTML);
+      }
+    });
+
+    limpiar.addEventListener("click", function () {
+      while (cont.childNodes.length) {
+        cont.removeChild(cont.childNodes[0]);
+      }
+    });
+  </script>
+</body>

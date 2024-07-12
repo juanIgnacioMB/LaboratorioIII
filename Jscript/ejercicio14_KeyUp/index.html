@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" charset="utf-8" />
+  <title>IEjercicio 14 Validacion key up</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    #cont {
+      width: 50vw;
+      height: 30vh;
+      background-color: beige;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    input {
+      width: 200px;
+    }
+    button {
+      width: 200px;
+      height: 30px;
+      border-radius: 10px;
+    }
+    #button-cont {
+      width: fit-content;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Validacion de un input</h1>
+
+  <div id="cont">
+    <label for="">Ingrese día del mes</label>
+    <input max="31" id="dia" type="number" />
+
+    <label for="">Ingrese el mes</label>
+    <input max="12" id="mes" type="number" />
+
+    <div id="button-cont">
+      <button id="enviar">Enviar</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var dia = document.getElementById("dia");
+    var mes = document.getElementById("mes");
+
+    dia.onkeyup = function () {
+      if (!dia.checkValidity()) {
+        alert("El valor ingresado debe ser entre 1 y 31");
+        dia.value = "";
+      }
+    };
+    mes.onkeyup = function () {
+      if (!mes.checkValidity()) {
+        alert("El valor ingresado debe ser entre 1 y 12");
+        mes.value = "";
+      }
+    };
+  </script>
+</body>

@@ -1,0 +1,209 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+footer {
+    width: 100%;
+    height: 15vh;
+    background-color: #902bf5;
+    color: lightgrey;
+    position: fixed;
+    bottom: 0%;
+
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    background-color: #902bf5;
+    color: lightgrey;
+
+}
+
+tbody tr:nth-child(odd) {
+    background: rgba(0, 0, 0, .2);
+}
+
+
+table {
+    width: 100%;
+    height: 70vh;
+    font-size: 25px;
+    border-spacing: 0;
+
+}
+
+thead {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 10vh;
+    display: block;
+}
+
+thead tr {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-flow: row;
+}
+
+tbody {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 60vh;
+    display: block;
+
+}
+
+th {
+    height: 100%;
+    width: 10%;
+    background-color: orange;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+tbody tr {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-flow: row;
+
+
+}
+
+td {
+    height: 100%;
+    width: 10%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fondo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.fondoApagado {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.altaModal {
+    color: orange;
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    height: 50%;
+    width: 60%;
+    background-color: #902bf5;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+
+
+}
+
+#cerrar-cont button {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+    width: 30px;
+    transition: all 0.5s;
+
+}
+
+#cerrar-cont button:hover {
+    background-color: rgb(252, 116, 116);
+}
+
+#cerrar-cont {
+    width: 30px;
+    margin-left: auto;
+    margin-right: 0;
+    background-color: aqua;
+
+
+}
+
+.contInputs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-weight: bolder;
+
+
+}
+
+.contIn {
+    width: 50%;
+    height: 25%;
+
+
+}
+
+.divCerrado {
+    display: none;
+}
+
+#cont-btn {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+#cont-btn button,
+header button {
+    cursor: pointer;
+    width: 10%;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+#cont-btn button:hover,
+header button:hover {
+    background-color: white;
+    color: orange;
+}
+
+
+#ventanaIframe {
+    height: 100%;
+}
+
+#PDFModal {
+    height: 90vh;
+
+}
+
+#modifModal,
+#altaModal {
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+}

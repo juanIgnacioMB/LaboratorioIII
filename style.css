@@ -2,31 +2,62 @@
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
+    text-align: center;
+    font-family: arial;
 
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+footer,
+header {
+    background-color: #800080;
+    height: 15%;
+    color: beige;
+}
+
+header {
+    font-size: 40px;
+}
+
+footer h3 {
+    text-align: left;
+}
+
+section {
+    height: 70%;
+    background-color: #3a3153;
+}
 
 .menu {
-    width: 50%;
+    width: 100%;
+
+
 }
 
 .menu ul {
     list-style: none;
     width: 100%;
+
 }
 
 .menu ul li {
-    background-color: orange;
+    background-color: #5dc89b;
     position: relative;
     float: left;
     justify-content: space-between;
     width: 20%;
+
 }
 
 .menu ul a {
     display: block;
     text-decoration: none;
     font-size: 1.5rem;
+    height: 50px;
 }
 
 .menu ul ul {
@@ -34,15 +65,20 @@
     position: absolute;
     top: 100%;
     left: 0;
+    height: 15em;
+    width: 100%;
+    overflow: auto;
 }
 
 .menu ul ul li {
     float: none;
-    width: 8em;
+    width: 100%;
+
 }
 
 .menu ul ul a {
     padding: 0.5em;
+
 }
 
 .menu ul li:hover ul {
