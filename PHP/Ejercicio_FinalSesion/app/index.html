@@ -15,6 +15,7 @@
       <button id="esconder">Esconder</button>
       <button id="alta">Alta</button>
       <button id="limpiar">Limpieza de filtros</button>
+      <button id="btnCerrarSesion">Cerrar sesion</button>
       <br />
       <label for="btnOrden">Orden</label>
       <br />
@@ -63,63 +64,64 @@
       <button id="cerrar">X</button>
     </div>
 
-    <div class="contInputs">
+    <form id="formAlta" class="contInputs">
       <div class="contIn">
         <label for="">ID</label>
-        <br />
+
         <br />
         <input id="idAlta" name="idAlta" type="text" />
       </div>
 
       <div class="contIn">
         <label for="">Titulo</label>
-        <br />
+
         <br />
         <input id="tituloAlta" name="tituloAlta" type="text" />
       </div>
 
       <div class="contIn">
         <label for="">Autor</label>
-        <br />
+
         <br />
         <input id="autorAlta" name="autorAlta" type="text" />
       </div>
 
       <div class="contIn">
         <label for="">Genero</label>
-        <br />
+
         <br />
         <select id="generoAlta" name="generoAlta"></select>
       </div>
 
       <div class="contIn">
         <label for="">Precio</label>
-        <br />
+
         <br />
         <input id="precioAlta" name="precioAlta" type="number" />
       </div>
 
       <div class="contIn">
         <label for="">Lanzamiento</label>
-        <br />
+
         <br />
         <input id="lanzamientoAlta" name="lanzamientoAlta" type="date" />
       </div>
 
       <div class="contIn">
         <label for="">Editorial</label>
-        <br />
+
         <br />
         <input id="editorialAlta" name="editorialAlta" type="text" />
       </div>
 
       <div class="contIn">
         <label for="">Tapa</label>
+
         <br />
-        <br />
-        <input id="tapaAlta" name="tapaAlta" type="file" />
+        <input id="PDFTapa" name="PDFTapa" type="file" />
       </div>
-    </div>
+    </form>
+
     <div id="cont-btn">
       <button id="enviarAlta">Dar alta</button>
     </div>
@@ -138,63 +140,64 @@
       <button id="cerrarIModif">X</button>
     </div>
 
-    <div class="contInputs">
+    <form id="formModi" class="contInputs" method="post">
       <div class="contIn">
         <label for="">ID</label>
+
         <br />
-        <br />
-        <input id="idModif" name="idAlta" type="text" />
+        <input id="idModif" name="idModif" type="text" />
       </div>
 
       <div class="contIn">
         <label for="">Titulo</label>
+
         <br />
-        <br />
-        <input id="tituloModif" name="tituloAlta" type="text" />
+        <input id="tituloModif" name="tituloModif" type="text" />
       </div>
 
       <div class="contIn">
         <label for="">Autor</label>
+
         <br />
-        <br />
-        <input id="autorModif" name="autorAlta" type="text" />
+        <input id="autorModif" name="autorModif" type="text" />
       </div>
 
       <div class="contIn">
         <label for="">Genero</label>
-        <br />
+
         <br />
         <select id="generoModif" name="generoModif"></select>
       </div>
 
       <div class="contIn">
         <label for="">Precio</label>
-        <br />
+
         <br />
         <input id="precioModif" name="precioModif" type="number" />
       </div>
 
       <div class="contIn">
         <label for="">Lanzamiento</label>
-        <br />
+
         <br />
         <input id="lanzamientoModif" name="lanzamientoModif" type="date" />
       </div>
 
       <div class="contIn">
         <label for="">Editorial</label>
-        <br />
+
         <br />
         <input id="editorialModif" name="editorialModif" type="text" />
       </div>
 
       <div class="contIn">
         <label for="">Tapa</label>
+
         <br />
-        <br />
-        <input id="tapaModif" name="tapaModif" type="file" />
+        <input id="PDFTapa" name="PDFTapa" type="file" />
       </div>
-    </div>
+    </form>
+
     <div id="cont-btn">
       <button id="enviarModif">Modificar</button>
     </div>

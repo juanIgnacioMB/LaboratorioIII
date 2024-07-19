@@ -35,7 +35,6 @@ if (!isset($_SESSION['iden'])) {
 	$stmt->bindParam(':user', $usuario);
 
 	$stmt->execute();
-
 	$fila = $stmt->fetch();
 
 	$contadorSes = $fila['Contador'];
@@ -64,7 +63,7 @@ infoDeSesion();
 ?>
 
 
-<button id="btnIngresarApp" style="background-color: #902bf5; font-size: 20px; color: orange; padding: 10px 10px; border-radius: 5px; cursor: pointer;">Ingresar</button>
+<button id="btnIngresarApp" style="background-color: #902bf5; font-size: 20px; color: orange; padding: 10px 10px; border-radius: 5px; cursor: pointer;">Ir a la app</button>
 <button id="btnDestruirSesion" style="background-color: #902bf5; font-size: 20px; color: orange;  padding: 10px 10px; border-radius: 5px; cursor: pointer;">Destruir Sesión</button>
 
 <script>

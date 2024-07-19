@@ -112,24 +112,19 @@ const crearTablaLibros = () => {
         $("#fondo").attr("class", "fondoApagado");
         $("#modifModal").attr("class", "altaModal");
         $("#idModif").val(IDLibro);
-        $("#idModif").attr("disabled", "true");
+        //  $("#idModif").attr("disabled", "true");
 
         $("#enviarModif").click(function () {
+          var formData = new FormData($("#formModi")[0]);
           $.ajax({
             type: "post",
             url: "./modificacion.php",
-
-            data: {
-              IDLibro: IDLibro,
-              tituloModif: $("#tituloModif").val(),
-              autorModif: $("#autorModif").val(),
-              generoModif: $("#generoModif").val(),
-              precioModif: $("#precioModif").val(),
-              lanzamientoModif: $("#lanzamientoModif").val(),
-              editorialModif: $("#editorialModif").val(),
-            },
+            data: formData,
+            processData: false,
+            contentType: false,
             success: function (respuestaDelServer) {
-              // alert($("#generoModif").val());
+              // alert(formData.get("tituloModif"));
+              //alert("dsdsadsa");
               alert(respuestaDelServer);
             },
           });
@@ -261,18 +256,13 @@ const darAlta = () => {
   });
 
   $("#enviarAlta").click(function () {
+    var formData = new FormData($("#formAlta")[0]);
     $.ajax({
       type: "post",
       url: "./alta.php",
-      data: {
-        idAlta: $("#idAlta").val(),
-        tituloAlta: $("#tituloAlta").val(),
-        autorAlta: $("#autorAlta").val(),
-        generoAlta: $("#generoAlta").val(),
-        precioAlta: $("#precioAlta").val(),
-        lanzamientoAlta: $("#lanzamientoAlta").val(),
-        editorialAlta: $("#editorialAlta").val(),
-      },
+      data: formData,
+      processData: false,
+      contentType: false,
       success: function (respuestaDelServer) {
         alert(respuestaDelServer);
       },
@@ -288,5 +278,8 @@ $(document).ready(function () {
   esconderTabla();
   $("#mostrar").click(function () {
     crearTablaLibros();
+  });
+  $("#btnCerrarSesion").click(function () {
+    location.href = "../destructor.php";
   });
 });

@@ -9,7 +9,7 @@ $respuesta_estado = "";
 try {
 
     $dsn = "mysql:host=$host;dbname=$dbname";
-    $dbh = new PDO($dsn, $user,$password); /*Database Handle*/
+    $dbh = new PDO($dsn, $user,$password); 
     $respuesta_estado = "conexion exitosa";
     
     } catch (PDOException $e) {

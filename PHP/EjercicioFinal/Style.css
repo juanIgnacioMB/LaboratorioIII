@@ -119,6 +119,7 @@ td {
 
 }
 
+
 #cerrar-cont button {
     cursor: pointer;
     font-size: 20px;
@@ -156,8 +157,6 @@ td {
 .contIn {
     width: 50%;
     height: 25%;
-
-
 }
 
 .divCerrado {
@@ -206,4 +205,10 @@ header button:hover {
 footer {
     display: flex;
     flex-direction: row;
+}
+
+@media (min-width: 1400px) {
+    header button {
+        color: red;
+    }
 }

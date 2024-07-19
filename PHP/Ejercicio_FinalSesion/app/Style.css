@@ -27,6 +27,8 @@ header {
     height: 15vh;
     background-color: #902bf5;
     color: lightgrey;
+    box-sizing: border-box;
+    padding: 10px;
 
 }
 
@@ -206,4 +208,17 @@ header button:hover {
 footer {
     display: flex;
     flex-direction: row;
+}
+
+
+@media (max-width: 1700px) {
+    thead tr th input {
+        width: 60px;
+
+    }
+
+    thead tr th select {
+        width: 60px;
+
+    }
 }
