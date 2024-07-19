@@ -85,7 +85,7 @@ const crearTablaLibros = () => {
 
       $(".btnPDF").click(function () {
         $("#fondo").attr("class", "fondoApagado");
-        // $("#PDFModal").empty();
+
         $("#PDFModal").attr("class", "altaModal");
         var IDLibro = $(this).closest("tr").find("td:first").text();
         $.ajax({
@@ -95,7 +95,6 @@ const crearTablaLibros = () => {
             IDLibro: IDLibro,
           },
           success: function (respuestaDelServer) {
-            // alert(respuestaDelServer);
             respJSON = JSON.parse(respuestaDelServer);
             $("#ventanaIframe").html(
               "<iframe width='100%' height='100%' src='data:application/pdf;base64," +
